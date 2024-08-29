@@ -9,7 +9,7 @@ const app = new Hono<{
 		JWT_SECRET: string,
 	}
 }>();
-
+app.get("/", (c) => c.text("hello world"))
 app.route("/api/v1/user", userRouter)
 app.route("/api/v1/blog", blogRouter)
 
